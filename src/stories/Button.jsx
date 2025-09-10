@@ -6,8 +6,8 @@ import './button.css';
 
 /** Primary UI component for user interaction */
 export const Button = ({
-  primary = false,
-  backgroundColor = null,
+  primary = true,
+  backgroundColor = backgroundColor,
   size = 'medium',
   label,
   ...props
