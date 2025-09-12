@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from './Button';
 
 const Card=(props)=>{
-    const {img,title,description}=props;
+    const {img,title,description,onClick}=props;
     return <>
     <div className='card'>
         <div className='card__header'>
@@ -12,9 +12,9 @@ const Card=(props)=>{
             <h3>{title}</h3>
             <p>{description}</p>
         </div>
-        <div className='card__footer'>
-            <Button label='Add to cart' backgroundColor='green'/>
-            <Button label='Buy now' backgroundColor='blue'/>
+        <div className='card__footer flex gap-3'>
+            <div><Button label='Add to cart' backgroundColor='green'/></div>
+                 <div> <Button label='Buy now' backgroundColor='blue' onClick={onClick}/></div>
         </div>
     </div>
     

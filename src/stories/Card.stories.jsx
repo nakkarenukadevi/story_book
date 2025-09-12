@@ -1,8 +1,12 @@
+
+
 import Card from "./Card";
+
 export default {
-  title: 'Example/Card',
+  title: 'Components/Card',
   component: Card,
-  tags: ['autodocs'],
+
+    
 };
 
 const Template = (args) => <Card {...args} />;

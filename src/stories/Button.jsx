@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './button.css';
+import { useNavigate } from 'react-router-dom';
 
 /** Primary UI component for user interaction */
 export const Button = ({
@@ -12,13 +13,18 @@ export const Button = ({
   label,
   ...props
 }) => {
+  let navigate=useNavigate()
   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const handleaddToCart = () => {
+   navigate('/cart')
+  };
   return (
     <button
       type="button"
       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={backgroundColor && { backgroundColor }}
       {...props}
+      onClick={handleaddToCart}
     >
       {label}
     </button>
