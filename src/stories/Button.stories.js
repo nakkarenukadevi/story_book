@@ -28,6 +28,12 @@ export const Primary = {
     label: 'Button',
   },
 };
+export const BuyNow={
+  args:{
+    label:'Buy now',
+    backgroundColor:'blue'
+  }
+}
 
 export const Secondary = {
   args: {
